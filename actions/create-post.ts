@@ -1,11 +1,10 @@
 'use server'
-import { title } from "process";
 import { z } from "zod";
 import { auth } from "../auth";
 import { prisma } from "../lib/prisma";
 import { redirect } from "next/navigation";
-import { Post } from "../lib/generated/prisma";
 import { revalidatePath } from "next/cache";
+import { Post } from "@prisma/client";
 
 const CreatePostSchema = z.object({
   title: z.string().min(3),
