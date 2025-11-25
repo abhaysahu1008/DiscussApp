@@ -79,7 +79,7 @@ export const createComment = async ({ postId, parentId }: { postId: string; pare
     }
   }
 
-  revalidatePath(`/topic/${topic.slug}/post/${postId}`);
+  revalidatePath(`/topic/${topic.slug}/posts/${postId}`);
   return {
     errors: {}
   }

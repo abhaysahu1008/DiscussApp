@@ -12,6 +12,8 @@ const TopicShowPage = async ({ params }: TopicShowPageProps) => {
   const { slug } = await params;
   console.log(params);
 
+  // const [a, b] = useState([])
+
   return (
     <div className=' grid grid-cols-4 gap-4 p-4'>
       <div className='col-span-4'>

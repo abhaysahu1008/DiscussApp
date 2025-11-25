@@ -3,8 +3,10 @@ import { PrismaAdapter } from "@auth/prisma-adapter";
 import GitHubProvider from "next-auth/providers/github";
 import { prisma } from "@/lib/prisma";
 
-if (!process.env.GITHUB_CLIENT_ID || !process.env.GITHUB_CLIENT_SECRET) {
-  throw new Error('Missing github client id or client secret');
+if (process.env.NODE_ENV === "production") {
+  if (!process.env.GITHUB_CLIENT_ID || !process.env.GITHUB_CLIENT_SECRET) {
+    throw new Error("Missing github client id or client secret");
+  }
 }
 
 export const { handlers: { GET, POST }, auth, signIn, signOut } = NextAuth({

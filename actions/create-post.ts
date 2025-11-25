@@ -15,7 +15,7 @@ const CreatePostSchema = z.object({
 type CreatePostFormState = {
   errors: {
     title?: string[],
-    conetnt?: string[],
+    content?: string[],
     formError?: string[]
   }
 }

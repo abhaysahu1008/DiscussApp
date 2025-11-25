@@ -10,7 +10,7 @@ const Header = () => {
     <div className='grid grid-cols-3 items-center'>
       <div className='flex justify-start'>
         <Link href={"/"}>
-          <h1 className='font-bold text-xl'>Discuss</h1>
+          <h1 className='font-bold text-xl'>IdeaLoop</h1>
         </Link>
       </div>
       <div className='flex justify-center'>

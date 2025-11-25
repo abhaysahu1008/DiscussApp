@@ -1,13 +1,14 @@
-import React from "react";
-import PostList from "../topic/[slug]/posts/post-list";
+// ...existing code...
 import { fetchPostBySearch } from "../../lib/query/post";
+import PostList from "../topic/[slug]/posts/post-list";
 
 type SearchPageProps = {
-  searchParams: { term?: string };
+  searchParams: { term?: string } | Promise<{ term?: string }>;
 };
 
-const SearchPage: React.FC<SearchPageProps> = ({ searchParams }) => {
-  const term = searchParams?.term ?? "";
+const SearchPage = async ({ searchParams }: SearchPageProps) => {
+  const resolved = await searchParams;
+  const term = resolved?.term ?? "";
 
   return (
     <div>
@@ -20,3 +21,4 @@ const SearchPage: React.FC<SearchPageProps> = ({ searchParams }) => {
 };
 
 export default SearchPage;
+// ...existing code...

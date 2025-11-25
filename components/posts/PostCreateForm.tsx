@@ -2,7 +2,6 @@
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
-  DialogClose,
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -52,7 +51,7 @@ export const PostCreateForm: React.FC<CreatePostFormProps> = ({ slug }) => {
               <Label htmlFor="content">Content</Label>
               <Textarea id="content" name="content" />
             </div>
-            {formState.errors.conetnt && <p className="text-sm text-red-600">{formState.errors.conetnt}</p>}
+            {formState.errors.content && <p className="text-sm text-red-600">{formState.errors.content}</p>}
             {formState.errors.formError && <p className="border border-red-400 bg-red-600 p-2 rounded">{formState.errors.formError}</p>}
           </div>
           <DialogFooter className="">

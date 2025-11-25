@@ -19,7 +19,7 @@ const PostList = async ({ fetchData, slug }: PostListProps) => {
         return (
           <div key={post.id}>
             {isFakeSlug ? (
-              // ----------- NO LINK -----------
+
               <Card className="cursor-default">
                 <CardHeader>
                   <CardTitle>{post.title}</CardTitle>

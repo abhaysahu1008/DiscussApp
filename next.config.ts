@@ -3,4 +3,4 @@ const nextConfig = {
   // Put only valid Next.js options here
 };
 
-module.exports = nextConfig;
+export default nextConfig;

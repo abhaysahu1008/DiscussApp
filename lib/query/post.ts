@@ -1,5 +1,5 @@
-import { Post } from "../generated/prisma"
-import { prisma } from "../prisma";
+import { Post } from "@prisma/client"
+import { prisma } from "../prisma"
 
 export type PostWithData = Post & {
   topic: { slug: string },
@@ -37,7 +37,7 @@ export const fetchTopPosts = async (): Promise<PostWithData[]> => {
 }
 
 
-export const fetchPostBySearch = async (term: string) => {
+export const fetchPostBySearch = async (term: string,) => {
 
   return prisma.post.findMany({
     include: {
