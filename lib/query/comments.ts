@@ -1,5 +1,5 @@
 import { prisma } from "../prisma"
-import type { Comment } from "../generated/prisma"
+import type { Comment } from "@prisma/client"
 
 type CommentWithAuthor = Comment & {
   user: { name: string | null; image: string | null }
